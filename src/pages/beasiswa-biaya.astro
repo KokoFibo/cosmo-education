@@ -1,0 +1,890 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Beasiswa & Biaya | Cosmo Education">
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Title & Strategic Insight Banner -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 w-full pt-8 pb-12">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 bg-surface-container-low rounded-xl p-8 lg:p-12 relative overflow-hidden shadow-sm">
+<div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 -top-24 w-80 h-80 rounded-full bg-primary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-3xl relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm mb-4">
+<span class="material-symbols-outlined text-sm text-secondary" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>PANDUAN RESMI 2025/2026</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight leading-tight">
+          Pusat Informasi Beasiswa &amp; Perencanaan Biaya Studi Luar Negeri
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4">
+          Akses panduan komprehensif pendanaan akademik, simulasi anggaran realistis lintas 6 negara utama, dan kurasi beasiswa prestisius dari pemerintah maupun universitas mitra Cosmo Education.
+        </p>
+</div>
+<div class="shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3 relative z-10 w-full sm:w-auto">
+<div class="bg-surface-container-lowest px-6 py-4 rounded-xl shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">TOTAL DANA TERAMANKAN</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">IDR 42.8 Miliar+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest px-6 py-4 rounded-xl shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">RASIO TEMBUS AWARDEE</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">89.4% Calon Bimbingan</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Financial & Scholarship Estimator -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 w-full py-8">
+<div class="bg-surface-container-lowest rounded-xl p-6 sm:p-10 shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Simulator Keuangan &amp; Kelayakan</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold mt-1">Kalkulator Estimasi Biaya &amp; Peluang Beasiswa</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Uji kecocokan profil akademik Anda secara real-time untuk melihat estimasi pengeluaran kotor dan proyeksi potongan beasiswa.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Input Form -->
+<div class="lg:col-span-6 flex flex-col gap-5 bg-surface-container-low p-6 rounded-xl">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2" for="degree-select">Jenjang Studi Direncanakan</label>
+<div class="relative">
+<select class="w-full h-11 px-4 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm appearance-none focus:outline-none shadow-sm cursor-pointer" id="degree-select">
+<option value="bachelor">Sarjana / Undergraduate (S1)</option>
+<option selected="" value="master">Pascasarjana / Master (S2)</option>
+<option value="doctorate">Doktoral / PhD (S3)</option>
+<option value="pathway">Diploma / Pathway Foundation</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2" for="country-select">Negara Pilihan Utama</label>
+<div class="relative">
+<select class="w-full h-11 px-4 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm appearance-none focus:outline-none shadow-sm cursor-pointer" id="country-select">
+<option selected="" value="uk">Inggris Raya (United Kingdom)</option>
+<option value="aus">Australia</option>
+<option value="usa">Amerika Serikat (USA)</option>
+<option value="ger">Jerman (Germany)</option>
+<option value="can">Kanada (Canada)</option>
+<option value="jpn">Jepang (Japan)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-none">expand_more</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-md text-label-md text-primary" for="gpa-range">IPK / Rata-rata Rapor</label>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold" id="gpa-display">3.75</span>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container-highest rounded-lg cursor-pointer" id="gpa-range" max="4.00" min="2.80" step="0.05" type="range" value="3.75"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant mt-1 font-mono">
+<span>2.80</span>
+<span>3.50</span>
+<span>4.00</span>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-md text-label-md text-primary" for="english-range">Skor IELTS Equivalent</label>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold" id="english-display">7.0</span>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container-highest rounded-lg cursor-pointer" id="english-range" max="8.5" min="5.5" step="0.5" type="range" value="7.0"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant mt-1 font-mono">
+<span>5.5</span>
+<span>6.5</span>
+<span>8.5</span>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container flex items-start gap-3 mt-1">
+<span class="material-symbols-outlined text-primary mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Parameter ini mengkalkulasi skema tuition fee rata-rata universitas mitra tingkat Tier 1 &amp; Tier 2 serta baseline tunjangan hidup resmi kementerian imigrasi negara tujuan.
+            </p>
+</div>
+</div>
+<!-- Output Cards -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="bg-primary text-on-primary p-6 sm:p-8 rounded-xl shadow-md relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-primary-fixed-dim">Status Peluang Beasiswa</span>
+<h3 class="font-headline-lg text-headline-lg text-secondary-fixed font-bold mt-1" id="calc-tier-badge">Tinggi: Full / Partial 50%</h3>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary-container">workspace_premium</span>
+</div>
+<div class="grid grid-cols-2 gap-4 my-6">
+<div class="p-3.5 rounded-lg bg-primary-container">
+<div class="font-label-sm text-label-sm text-primary-fixed-dim">Est. Biaya Kotor / Thn</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary mt-0.5" id="calc-gross-cost">Rp 510.000.000</div>
+</div>
+<div class="p-3.5 rounded-lg bg-primary-container">
+<div class="font-label-sm text-label-sm text-primary-fixed-dim">Potensi Nilai Beasiswa</div>
+<div class="font-headline-sm text-headline-sm font-bold text-secondary-container mt-0.5" id="calc-scholarship-val">- Rp 255.000.000</div>
+</div>
+</div>
+<div class="pt-4 border-t-0 bg-primary-container/40 p-4 rounded-lg">
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Estimasi Pengeluaran Mandiri (Nett):</span>
+<span class="font-headline-md text-headline-md text-on-primary font-bold" id="calc-net-cost">Rp 255.000.000 / thn</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-primary-container">Sudah mencakup estimasi akomodasi, makan bulanan, asuransi, dan visa tahunan.</p>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3 font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">checklist</span>
+              Rekomendasi Skema Beasiswa yang Cocok
+            </h4>
+<div class="flex flex-col gap-2.5" id="matched-scholarships-list">
+<div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<div>
+<div class="font-label-md text-label-md text-primary">Chevening Scholarship (UK)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Fully Funded · S2 Seluruh Universitas UK</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">Prioritas 1</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<div>
+<div class="font-label-md text-label-md text-primary">LPDP Reguler &amp; Parsial</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Fully Funded / Co-funding · Universitas Top 100</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">Tinggi</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">school</span>
+<div>
+<div class="font-label-md text-label-md text-primary">Vice-Chancellor Academic Excellence</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Potongan Uang Kuliah 50% Otomatis</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Mitra Resmi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comprehensive Scholarship Directory -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 w-full py-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Direktori Pendanaan Terbuka</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold mt-1">Katalog Beasiswa Unggulan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+          Eksplorasi ribuan opsi pendanaan mulai dari beasiswa penuh kementerian, skema bilateral negara tujuan, hingga potongan prestasi akademik universitas.
+        </p>
+</div>
+<!-- Filter Buttons -->
+<div class="flex flex-wrap gap-2" id="dir-filters">
+<button class="px-4 py-2 rounded-full font-label-md text-label-md font-bold bg-primary text-on-primary transition-all" data-filter="all" type="button">Semua Program</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md font-bold bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-filter="gov-id" type="button">Pemerintah RI</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md font-bold bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-filter="gov-dest" type="button">Negara Tujuan</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md font-bold bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-filter="univ-partner" type="button">Mitra Kampus</button>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="scholarship-cards-grid">
+<!-- LPDP -->
+<div class="scholarship-card bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between" data-category="gov-id">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">Pemerintah Indonesia</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Fully Funded</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">LPDP (Lembaga Pengelola Dana Pendidikan)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Mencakup biaya kuliah 100%, tunjangan bulanan (living allowance), asuransi kesehatan, visa, tunjangan keluarga (S3), serta tiket pesawat pulang-pergi.
+          </p>
+<div class="my-4 py-3 bg-surface-container-low rounded-lg px-4 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-on-surface-variant">Jenjang:</span><span class="font-bold text-primary">Master (S2) &amp; Doktor (S3)</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Periode Seleksi:</span><span class="font-bold text-primary">Tahap 1 (Jan-Jun) &amp; Tahap 2 (Jun-Nov)</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Syarat IPK:</span><span class="font-bold text-primary">Min. 3.00 (S2) / 3.25 (S3)</span></div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md font-bold text-center transition-colors" href="#">
+          Panduan Kurasi Essay LPDP
+        </a>
+</div>
+<!-- IISMA -->
+<div class="scholarship-card bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between" data-category="gov-id">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">Kemendikbudristek</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Fully Funded</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">IISMA (Indonesian Int. Student Mobility Awards)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Program beasiswa mobilitas 1 semester bagi mahasiswa aktif S1 &amp; Vokasi Indonesia di 100+ universitas top dunia dengan transfer hingga 20 SKS.
+          </p>
+<div class="my-4 py-3 bg-surface-container-low rounded-lg px-4 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-on-surface-variant">Jenjang:</span><span class="font-bold text-primary">Sarjana Semester 4 - 6</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Durasi:</span><span class="font-bold text-primary">1 Semester (4-6 Bulan)</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Bahasa:</span><span class="font-bold text-primary">IELTS 6.0 / TOEFL iBT 78 / Duolingo 100</span></div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md font-bold text-center transition-colors" href="#">
+          Bimbingan Seleksi IISMA
+        </a>
+</div>
+<!-- BIM (Beasiswa Indonesia Maju) -->
+<div class="scholarship-card bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between" data-category="gov-id">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">Puspresnas / BPPT</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Fully Funded S1/S2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Beasiswa Indonesia Maju (BIM)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Dikhususkan untuk peserta didik berprestasi di ajang olimpiade sains, riset, seni, maupun olahraga untuk menempuh gelar sarjana di universitas elit dunia.
+          </p>
+<div class="my-4 py-3 bg-surface-container-low rounded-lg px-4 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-on-surface-variant">Jenjang:</span><span class="font-bold text-primary">S1 Luar Negeri (Degree)</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Target:</span><span class="font-bold text-primary">Siswa SMA/SMK Kelas XII Berprestasi</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Fasilitas:</span><span class="font-bold text-primary">Full Tuition + Living Allowance + Tiket</span></div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md font-bold text-center transition-colors" href="#">
+          Pelatihan Profil Prestasi BIM
+        </a>
+</div>
+<!-- Chevening UK -->
+<div class="scholarship-card bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between" data-category="gov-dest">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">FCDO Inggris Raya</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Fully Funded Master</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Chevening Scholarship (UK)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Beasiswa bergengsi kepemimpinan global pemerintah Inggris untuk program Master 1 tahun di universitas mana pun di UK. Menuntut rekam jejak kepemimpinan.
+          </p>
+<div class="my-4 py-3 bg-surface-container-low rounded-lg px-4 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-on-surface-variant">Pengalaman Kerja:</span><span class="font-bold text-primary">Min. 2 Tahun (2.800 Jam)</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Deadline Tahunan:</span><span class="font-bold text-primary">Awal November Tiap Tahun</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Komponen:</span><span class="font-bold text-primary">Full Tuition, Tunjangan London/Non-London</span></div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md font-bold text-center transition-colors" href="#">
+          Bedah 4 Esai Wajib Chevening
+        </a>
+</div>
+<!-- Australia Awards (AAS) -->
+<div class="scholarship-card bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between" data-category="gov-dest">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">DFAT Australia</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Fully Funded</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Australia Awards Scholarships (AAS)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Inisiatif pembangunan bilateral Australia bagi talenta Indonesia untuk gelar Master &amp; Doktor, dilengkapi pelatihan bahasa Pre-Departure Training di Bali/Jakarta.
+          </p>
+<div class="my-4 py-3 bg-surface-container-low rounded-lg px-4 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-on-surface-variant">Syarat IPK:</span><span class="font-bold text-primary">Min. 2.90 (Prioritas DTA lebih fleksibel)</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Skor Minimum:</span><span class="font-bold text-primary">IELTS 5.5 / TOEFL ITP 525</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Pemberangkatan:</span><span class="font-bold text-primary">Disertai pelatihan intensif pra-kuliah</span></div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md font-bold text-center transition-colors" href="#">
+          Konsultasi Sasaran Wilayah AAS
+        </a>
+</div>
+<!-- Fulbright USA -->
+<div class="scholarship-card bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between" data-category="gov-dest">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">AMINEF / US Dept. of State</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Full Fellowship</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Fulbright Master &amp; Doctoral Awards</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Skema unggulan belajar di universitas terkemuka Amerika Serikat. Memberikan asistensi penempatan kampus terbaik yang sesuai dengan rancangan riset pelamar.
+          </p>
+<div class="my-4 py-3 bg-surface-container-low rounded-lg px-4 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-on-surface-variant">Batas Lamaran:</span><span class="font-bold text-primary">15 Februari (Setiap Tahun)</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Kriteria:</span><span class="font-bold text-primary">IPK 3.00, TOEFL ITP 550 / iBT 80</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Durasi:</span><span class="font-bold text-primary">1-2 Thn (Master) / 3 Thn (Doktor)</span></div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md font-bold text-center transition-colors" href="#">
+          Review Dokumen Riset Fulbright
+        </a>
+</div>
+<!-- DAAD Jerman & MEXT Jepang -->
+<div class="scholarship-card bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between" data-category="gov-dest">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">Jerman &amp; Jepang</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Fully Funded</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">DAAD EPOS (Jerman) &amp; MEXT (Jepang)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            DAAD menanggung biaya hidup di universitas negeri Jerman (bebas SPP), sedangkan MEXT menanggung tiket, uang saku 144.000 JPY/bulan dan SPP penuh di Jepang.
+          </p>
+<div class="my-4 py-3 bg-surface-container-low rounded-lg px-4 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-on-surface-variant">Bahasa:</span><span class="font-bold text-primary">Tersedia Program Berbahasa Inggris</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Status Kuliah:</span><span class="font-bold text-primary">Bebas Tuition Fee + Tunjangan Bulanan</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Peluang:</span><span class="font-bold text-primary">Riset Teknologi, Rekayasa, Kebijakan Publik</span></div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md font-bold text-center transition-colors" href="#">
+          Panduan Pendaftaran DAAD/MEXT
+        </a>
+</div>
+<!-- Chancellor's International Scholarship -->
+<div class="scholarship-card bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between" data-category="univ-partner">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">Mitra Universitas UK &amp; Aus</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Tuition 50% - 100%</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Chancellor's International Scholarship</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Dianugerahkan kepada pendaftar internasional dengan nilai rapor/IPK terbaik. Otomatis diseleksi begitu pendaftaran universitas diajukan melalui Cosmo.
+          </p>
+<div class="my-4 py-3 bg-surface-container-low rounded-lg px-4 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-on-surface-variant">Tipe:</span><span class="font-bold text-primary">Merit-Based (Tanpa Esai Terpisah)</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Potongan Nilai:</span><span class="font-bold text-primary">Hingga £10.000 / AUD $20.000 / thn</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Kampus Contoh:</span><span class="font-bold text-primary">Warwick, Sussex, Bristol, Sydney</span></div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold text-center hover:bg-secondary hover:text-on-secondary transition-colors" href="#">
+          Cek Kuota Mitra Tersisa
+        </a>
+</div>
+<!-- Vice-Chancellor & Global Excellence -->
+<div class="scholarship-card bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between" data-category="univ-partner">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">Mitra Australia &amp; NZ</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Parsial 20% - 35%</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Global Excellence Award &amp; VC Grant</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Diskon tuition langsung sepanjang durasi program penuh (3-4 tahun S1 atau 2 tahun S2). Peluang lolos 95% untuk mahasiswa bimbingan Cosmo yang memenuhi cut-off GPA.
+          </p>
+<div class="my-4 py-3 bg-surface-container-low rounded-lg px-4 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between"><span class="text-on-surface-variant">Proses:</span><span class="font-bold text-primary">Langsung tertera pada Surat LoA</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Durasi:</span><span class="font-bold text-primary">Multi-Year (Dapat Diperpanjang)</span></div>
+<div class="flex justify-between"><span class="text-on-surface-variant">Eligibilitas:</span><span class="font-bold text-primary">IPK &gt;= 3.20 atau Rapor &gt;= 85</span></div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold text-center hover:bg-secondary hover:text-on-secondary transition-colors" href="#">
+          Klaim Potongan Mitra Cosmo
+        </a>
+</div>
+</div>
+</section>
+<!-- Alumni Masterclass: Tips & Kiat Lolos Beasiswa -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 w-full py-12">
+<div class="bg-surface-container-low rounded-xl p-8 lg:p-12 relative overflow-hidden">
+<div class="max-w-3xl mb-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Strategi Lolos Kurasi Juri</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold mt-1">Tips &amp; Kiat Lolos Seleksi dari Para Alumni Cosmo</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Pelajari formula konkret di balik esai dan wawancara para awardee alumni Cosmo yang berhasil memenangkan kompetisi beasiswa dengan rasio penerimaan di bawah 3%.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Tip 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">edit_note</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold uppercase">Struktur Esai</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-3">Menulis Motivation Letter Berdaya Pikat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Hindari mengulang riwayat hidup (CV). Gunakan pendekatan <em>The Golden Circle (Why - How - What)</em>. Mulai dengan pemantik personal yang memicu ketertarikan Anda pada isu spesifik, lalu sambungkan mengapa kampus tersebut adalah satu-satunya katalisator yang relevan.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t-0 bg-surface-container-low p-3 rounded-lg flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Close up professional portrait photo of an Indonesian female university scholar smiling warmly with modern business blazer against soft daylight studio background in neutral slate and soft oceanic navy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoXgBcQCPQDDK1SVeOPjGYH6XcX9BkqHToNVGV6qXMhOr3bTJxIu-jppa1daec-zI7QqOwdisZL2QAFYM3yn-VZcbMz1uWJrWd7L-zuSSgiwTXbA5fnsuEkRzKBi3ddkMdHv2vi4X0dDpQhMG697czWyC-AT4uoV8qNkXfMBBwx-HilAmGCk08hKR6MZis43sro9kvirEyCkZ3UhasNsDqZWP7fAvjRIJiZj98RRYYfJpMrZi7-MpVNw"/>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Nadya P. Rahmadina</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Chevening Scholar '23, LSE</div>
+</div>
+</div>
+</div>
+<!-- Tip 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">public</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold uppercase">Formulasi Kontribusi</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-3">Strategi Esai Kontribusi Pascastudi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Juri LPDP &amp; AAS mencari rencana yang <em>SMART (Spesifik, Terukur, Masuk Akal)</em>. Bagilah rencana Anda menjadi horizon 1 tahun (adaptasi teknis), 3 tahun (eksekusi program bersama institusi mitra/kementerian), dan 5 tahun (kebijakan berdampak nasional).
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t-0 bg-surface-container-low p-3 rounded-lg flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Portrait photo of an Indonesian male professional scholar wearing glasses and dark blue oxford shirt looking confident and approachable in front of modern university library background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzP0m7yfh9Rizf9ra3Bc0ucr689UmDrgbwM5urZoAtNE7pXY97QSD8i_H0Bukx5Akq20bo9O0z1I94XZFSY_drVAH7LVq4vizsRr8sWIKlIkrXRvIdmtvurWii6PqA4o4ONUampTJR7iq6x6ARgjw3OcH7J1DDv4mIniR34jj0PWwiXhWRpOqivNqRcDK2-4o8n7evfvjc5peCZe52n1D5rmaXam2Shx7PzjIYm2In97X3u1H50n3XPQ"/>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Faris Hendrawan, M.Sc.</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">LPDP Awardee, Univ. of Melbourne</div>
+</div>
+</div>
+</div>
+<!-- Tip 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">forum</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold uppercase">Simulasi Wawancara</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-3">Trik Menghadapi Wawancara Panel &amp; Psikolog</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Gunakan teknik <em>STAR (Situation, Task, Action, Result)</em>. Jangan defensif saat diserang pertanyaan paradoks mengenai rencana karir. Kunci utama adalah konsistensi narasi antara apa yang tertulis di esai dengan apa yang diartikulasikan secara verbal.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t-0 bg-surface-container-low p-3 rounded-lg flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Portrait photo of a friendly young Indonesian professional woman with a clean neat pony tail wearing smart casual jacket with calm natural lighting in a bright modern educational center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq-p2YOLn3VOqMBNj7BXp1JrIZDmM9nz9XxC5GLwpIsEjzdyufqTfmV122aby-0bGBMkSEdqXoZfpFOrUwgv0fpazTzz0GnirSotVGXoYy1MC2BkhuBKR1AyMksdhQ9MCVwDnMWLn3X2UVNZvuUMAjUVbXXiEgiJB5cvk5Q7RtDXaN0PeNfw27-Cm4VNol8jSUyeQpwj562CXfCCnjSDnBQlUudl77kTVyRPasfirAzlnOb7EVUWMh_A"/>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Clarissa Amanda</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Fulbright Fellow '22, Boston Univ.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Living Costs Breakdown across Top Student Cities -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 w-full py-12">
+<div class="mb-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Transparansi Finansial Realistis</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold mt-1">Estimasi Biaya Hidup di Kota-Kota Pelajar Utama</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-3xl">
+        Data riil pengeluaran bulanan rata-rata mahasiswa internasional di 6 destinasi favorit (di luar tuition fee), termasuk rincian asuransi wajib resmi (OSHC/IHS) dan akomodasi.
+      </p>
+</div>
+<!-- Comparative Visual Table / Card Deck -->
+<div class="overflow-x-auto pb-4">
+<div class="min-w-[860px] grid grid-cols-6 gap-4">
+<!-- London -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md font-bold text-primary">London, UK</span>
+<span class="material-symbols-outlined text-secondary text-base">location_city</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-bold mb-1">~ £1.350 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">/ bln</span></div>
+<div class="font-label-sm text-label-sm text-secondary font-bold mb-4">Rp 27,2 Juta / Bulan</div>
+<div class="space-y-3 font-body-sm text-body-sm pt-2">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Akomodasi (Zone 2-3)</span>
+<span class="font-bold text-primary">£800 - £1.000</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Makan &amp; Groceries</span>
+<span class="font-bold text-primary">£220 - £300</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Transport (Oyster Card)</span>
+<span class="font-bold text-primary">£110 - £150</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Asuransi Wajib</span>
+<span class="font-bold text-primary">IHS (£776 / thn)</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t-0 text-[11px] text-on-surface-variant">Legal kerja part-time 20 jam/mgg saat kuliah aktif.</div>
+</div>
+<!-- Melbourne -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md font-bold text-primary">Melbourne, AU</span>
+<span class="material-symbols-outlined text-secondary text-base">location_city</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-bold mb-1">~ AUD 2.100 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">/ bln</span></div>
+<div class="font-label-sm text-label-sm text-secondary font-bold mb-4">Rp 21,8 Juta / Bulan</div>
+<div class="space-y-3 font-body-sm text-body-sm pt-2">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Akomodasi (Sharehouse)</span>
+<span class="font-bold text-primary">AUD 1.100 - 1.400</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Makan &amp; Groceries</span>
+<span class="font-bold text-primary">AUD 400 - 550</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Transport (myki)</span>
+<span class="font-bold text-primary">AUD 160 - 200</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Asuransi Wajib</span>
+<span class="font-bold text-primary">OSHC (~AUD 650/thn)</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t-0 text-[11px] text-on-surface-variant">Izin kerja resmi 48 jam per dua minggu (fortnight).</div>
+</div>
+<!-- Sydney -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md font-bold text-primary">Sydney, AU</span>
+<span class="material-symbols-outlined text-secondary text-base">location_city</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-bold mb-1">~ AUD 2.450 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">/ bln</span></div>
+<div class="font-label-sm text-label-sm text-secondary font-bold mb-4">Rp 25,4 Juta / Bulan</div>
+<div class="space-y-3 font-body-sm text-body-sm pt-2">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Akomodasi (Inner Suburbs)</span>
+<span class="font-bold text-primary">AUD 1.350 - 1.700</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Makan &amp; Groceries</span>
+<span class="font-bold text-primary">AUD 450 - 600</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Transport (Opal)</span>
+<span class="font-bold text-primary">AUD 180 - 220</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Asuransi Wajib</span>
+<span class="font-bold text-primary">OSHC (~AUD 650/thn)</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t-0 text-[11px] text-on-surface-variant">Upah minimum standar AU tertinggi di dunia (~$24/jam).</div>
+</div>
+<!-- Boston -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md font-bold text-primary">Boston, USA</span>
+<span class="material-symbols-outlined text-secondary text-base">location_city</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-bold mb-1">~ USD 2.200 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">/ bln</span></div>
+<div class="font-label-sm text-label-sm text-secondary font-bold mb-4">Rp 34,7 Juta / Bulan</div>
+<div class="space-y-3 font-body-sm text-body-sm pt-2">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Akomodasi (Apt Share)</span>
+<span class="font-bold text-primary">USD 1.200 - 1.600</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Makan &amp; Groceries</span>
+<span class="font-bold text-primary">USD 400 - 550</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Transport (CharlieCard)</span>
+<span class="font-bold text-primary">USD 90 - 120</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Asuransi Wajib</span>
+<span class="font-bold text-primary">Univ Plan (~$2.8k/thn)</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t-0 text-[11px] text-on-surface-variant">Peluang kerja On-Campus hingga 20 jam per pekan.</div>
+</div>
+<!-- Vancouver -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md font-bold text-primary">Vancouver, CA</span>
+<span class="material-symbols-outlined text-secondary text-base">location_city</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-bold mb-1">~ CAD 1.950 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">/ bln</span></div>
+<div class="font-label-sm text-label-sm text-secondary font-bold mb-4">Rp 22,6 Juta / Bulan</div>
+<div class="space-y-3 font-body-sm text-body-sm pt-2">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Akomodasi (Off-campus)</span>
+<span class="font-bold text-primary">CAD 1.100 - 1.450</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Makan &amp; Groceries</span>
+<span class="font-bold text-primary">CAD 380 - 480</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Transport (Compass Card)</span>
+<span class="font-bold text-primary">CAD 110 (U-Pass)</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Asuransi Wajib</span>
+<span class="font-bold text-primary">MSP (~CAD 75/bln)</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t-0 text-[11px] text-on-surface-variant">Akses Post-Graduation Work Permit (PGWP) hingga 3 thn.</div>
+</div>
+<!-- Berlin -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md font-bold text-primary">Berlin, DE</span>
+<span class="material-symbols-outlined text-secondary text-base">location_city</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-bold mb-1">~ €950 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">/ bln</span></div>
+<div class="font-label-sm text-label-sm text-secondary font-bold mb-4">Rp 16,3 Juta / Bulan</div>
+<div class="space-y-3 font-body-sm text-body-sm pt-2">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Akomodasi (WG Room)</span>
+<span class="font-bold text-primary">€450 - €650</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Makan &amp; Groceries</span>
+<span class="font-bold text-primary">€200 - €280</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Transport (Semesterticket)</span>
+<span class="font-bold text-primary">Termasuk di SPP Univ</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="text-on-surface-variant text-[12px] block">Asuransi Publik</span>
+<span class="font-bold text-primary">TK/AOK (~€120/bln)</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t-0 text-[11px] text-on-surface-variant">Kuliah universitas negeri bebas SPP (hanya iuran semester).</div>
+</div>
+</div>
+</div>
+</section>
+<!-- High-Conversion Scholarship Consultation CTA -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 w-full py-12">
+<div class="bg-primary-container text-on-primary rounded-xl p-8 sm:p-12 relative overflow-hidden shadow-lg">
+<div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-primary/30 to-transparent pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<div class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary text-secondary-fixed font-label-sm text-label-sm mb-4">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+<span>BEASISWA COACHING CLINIC 1-ON-1</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-primary font-bold">
+            Konsultasikan Peluang Beasiswa Anda Bersama Spesialis Beasiswa Cosmo
+          </h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim mt-4 max-w-2xl">
+            Dapatkan evaluasi CV gratis, audit potensi beasiswa, serta pendampingan intensif penyusunan Letter of Motivation dari mentor alumni LPDP, Chevening, dan Fulbright.
+          </p>
+<div class="flex flex-wrap items-center gap-6 mt-6">
+<div class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-label-md text-label-md">Audit Profil Tanpa Biaya</span>
+</div>
+<div class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-label-md text-label-md">Pencocokan 3 Opsi Kampus &amp; Mitra</span>
+</div>
+<div class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-label-md text-label-md">Bimbingan Dokumen Esai</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-3">
+<a class="w-full py-4 px-6 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-label-lg text-label-lg font-bold text-center transition-all shadow-md active:scale-95" href="#">
+            Jadwalkan Sesi Konsultasi
+          </a>
+<a class="w-full py-3.5 px-6 rounded-lg bg-primary hover:bg-surface-container-high hover:text-primary text-on-primary font-label-md text-label-md font-bold text-center transition-all flex items-center justify-center gap-2" href="https://wa.me/628161965707" target="_blank">
+<span class="material-symbols-outlined text-xl text-secondary">chat</span>
+<span>Chat WhatsApp Konselor Beasiswa</span>
+</a>
+<span class="font-label-sm text-label-sm text-center text-primary-fixed-dim mt-1">Kuota bimbingan beasiswa dibatasi per intake demi kualitas mentorship.</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<script is:inline>
+(function () {
+    // Dynamic Calculator Logic
+    const degreeSelect = document.getElementById('degree-select');
+    const countrySelect = document.getElementById('country-select');
+    const gpaRange = document.getElementById('gpa-range');
+    const gpaDisplay = document.getElementById('gpa-display');
+    const englishRange = document.getElementById('english-range');
+    const englishDisplay = document.getElementById('english-display');
+
+    const calcTierBadge = document.getElementById('calc-tier-badge');
+    const calcGrossCost = document.getElementById('calc-gross-cost');
+    const calcScholarshipVal = document.getElementById('calc-scholarship-val');
+    const calcNetCost = document.getElementById('calc-net-cost');
+    const matchedList = document.getElementById('matched-scholarships-list');
+
+    // Baseline costs in million IDR
+    const baseCosts = {
+      uk: { bachelor: 540, master: 510, doctorate: 470, pathway: 420 },
+      aus: { bachelor: 580, master: 540, doctorate: 490, pathway: 430 },
+      usa: { bachelor: 720, master: 680, doctorate: 590, pathway: 510 },
+      ger: { bachelor: 220, master: 210, doctorate: 190, pathway: 200 },
+      can: { bachelor: 490, master: 460, doctorate: 410, pathway: 380 },
+      jpn: { bachelor: 260, master: 240, doctorate: 210, pathway: 230 }
+    };
+
+    function updateCalculator() {
+      const gpa = parseFloat(gpaRange.value);
+      const eng = parseFloat(englishRange.value);
+      const degree = degreeSelect.value;
+      const country = countrySelect.value;
+
+      gpaDisplay.textContent = gpa.toFixed(2);
+      englishDisplay.textContent = eng.toFixed(1);
+
+      const grossMio = (baseCosts[country] && baseCosts[country][degree]) || 500;
+
+      let tierText = 'Rendah: Jalur Mandiri';
+      let discountRate = 0.10;
+      let recommendedHTML = '';
+
+      if (gpa >= 3.75 && eng >= 7.0) {
+        tierText = 'Sangat Tinggi: Full / Fully Funded Potensial';
+        discountRate = 0.70;
+        recommendedHTML = `
+          <div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">workspace_premium</span>
+              <div>
+                <div class="font-label-md text-label-md text-primary">${country === 'uk' ? 'Chevening Scholarship (UK)' : country === 'aus' ? 'Australia Awards (AAS)' : country === 'usa' ? 'Fulbright Award' : country === 'ger' ? 'DAAD Research Grant' : 'LPDP Reguler Top 100'}</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant">Fully Funded · Penuh 100% Biaya &amp; Hidup</div>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Peluang Top</span>
+          </div>
+          <div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">verified</span>
+              <div>
+                <div class="font-label-md text-label-md text-primary">LPDP Reguler / BIM Afirmasi</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant">Fully Funded Kementerian Keuangan</div>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">Sangat Cocok</span>
+          </div>
+          <div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">school</span>
+              <div>
+                <div class="font-label-md text-label-md text-primary">Chancellor's Merit Award 50%</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant">Diskon SPP Universitas Garansi Profil</div>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">Otomatis</span>
+          </div>
+        `;
+      } else if (gpa >= 3.40 && eng >= 6.5) {
+        tierText = 'Tinggi: Partial 30% - 50% SPP';
+        discountRate = 0.40;
+        recommendedHTML = `
+          <div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">school</span>
+              <div>
+                <div class="font-label-md text-label-md text-primary">Global Excellence Scholarship</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant">Potongan Uang Kuliah 25% - 50% Otomatis</div>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Prioritas Mitra</span>
+          </div>
+          <div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">verified</span>
+              <div>
+                <div class="font-label-md text-label-md text-primary">LPDP Parsial (Co-Funding)</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant">Pendanaan Biaya Hidup atau SPP Mandiri</div>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">Tinggi</span>
+          </div>
+        `;
+      } else if (gpa >= 3.00 && eng >= 6.0) {
+        tierText = 'Menengah: Beasiswa Universitas 15% - 25%';
+        discountRate = 0.20;
+        recommendedHTML = `
+          <div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">school</span>
+              <div>
+                <div class="font-label-md text-label-md text-primary">Early Bird &amp; Regional Merit Bursary</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant">Potongan Langsung £3.000 - AUD $7.500 Thn Pertama</div>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Pasti Dapat</span>
+          </div>
+        `;
+      } else {
+        tierText = 'Rendah / Jalur Pathway Bursary';
+        discountRate = 0.10;
+        recommendedHTML = `
+          <div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">school</span>
+              <div>
+                <div class="font-label-md text-label-md text-primary">Pathway Progression Bursary</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant">Potongan program persiapan bahasa/diploma 10% - 15%</div>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">Tersedia</span>
+          </div>
+        `;
+      }
+
+      const discValMio = Math.round(grossMio * discountRate);
+      const netValMio = grossMio - discValMio;
+
+      calcTierBadge.textContent = tierText;
+      calcGrossCost.textContent = 'Rp ' + grossMio.toLocaleString('id-ID') + '.000.000';
+      calcScholarshipVal.textContent = '- Rp ' + discValMio.toLocaleString('id-ID') + '.000.000';
+      calcNetCost.textContent = 'Rp ' + netValMio.toLocaleString('id-ID') + '.000.000 / thn';
+      matchedList.innerHTML = recommendedHTML;
+    }
+
+    gpaRange.addEventListener('input', updateCalculator);
+    englishRange.addEventListener('input', updateCalculator);
+    degreeSelect.addEventListener('change', updateCalculator);
+    countrySelect.addEventListener('change', updateCalculator);
+
+    updateCalculator();
+
+    // Directory Filtering
+    const filterBtns = document.querySelectorAll('#dir-filters button');
+    const cards = document.querySelectorAll('.scholarship-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        this.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        this.classList.add('bg-primary', 'text-on-primary');
+
+        const filter = this.getAttribute('data-filter');
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  })();
+</script>
+</Layout>

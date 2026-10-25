@@ -1,0 +1,866 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Destinasi Studi | Cosmo Education">
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- HERO EDITORIAL TITLE & GLOBAL INTRO -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-high/40 via-surface to-surface pb-12 pt-8">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Micro Breadcrumb & Global Badge -->
+<div class="flex items-center gap-3 mb-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm leading-none text-secondary" style="font-variation-settings: 'FILL' 1;">public</span>
+          Official Partner 450+ Universitas Dunia
+        </span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Panduan Intake 2025/2026</span>
+</div>
+<!-- Main Title Block with Editorial Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">
+            Eksplorasi Destinasi <br class="hidden sm:inline"/>
+<span class="text-secondary">Studi Terbaik</span> di Dunia.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Rancang jalur akademik internasional Anda secara presisi. Bandingkan izin kerja pasca-studi (PSW/OPT), prospek karir global, regulasi visa pelajar, serta kalkulasi realistis biaya hidup dan beasiswa.
+          </p>
+</div>
+<!-- Metric Snapshot Cards (Top Right Offset) -->
+<div class="lg:col-span-4 flex flex-col gap-3 bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Tingkat Kelulusan Visa 2024</span>
+<span class="font-headline-sm text-headline-sm text-secondary">98.4%</span>
+</div>
+<!-- Inline Sparkline / Progress Bar -->
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[98.4%]"></div>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div>
+<div class="font-headline-md text-headline-md text-primary font-bold">18+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Negara Tujuan</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-primary font-bold">Rp 42M+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Beasiswa Dimenangkan</div>
+</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE QUICK FILTER BAR -->
+<div class="mt-12 bg-surface-container-lowest p-6 lg:p-8 rounded-2xl shadow-md flex flex-col gap-6">
+<!-- Row 1: Negara Destinasi Chips -->
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none text-secondary">flag</span>
+              Negara Tujuan
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="activeFilterCounter">Menampilkan 5 Wilayah Utama</span>
+</div>
+<div class="flex flex-wrap gap-2" id="countryFilterContainer">
+<button class="filter-country-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-primary text-on-primary shadow-sm" data-country="all">Semua Negara</button>
+<button class="filter-country-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-low text-on-surface hover:bg-surface-container-high" data-country="uk">Inggris (UK)</button>
+<button class="filter-country-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-low text-on-surface hover:bg-surface-container-high" data-country="aus">Australia &amp; NZ</button>
+<button class="filter-country-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-low text-on-surface hover:bg-surface-container-high" data-country="usa">Amerika Serikat</button>
+<button class="filter-country-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-low text-on-surface hover:bg-surface-container-high" data-country="can">Kanada</button>
+<button class="filter-country-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-low text-on-surface hover:bg-surface-container-high" data-country="ger">Jerman &amp; Eropa</button>
+<button class="filter-country-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all bg-surface-container-low text-on-surface hover:bg-surface-container-high" data-country="sg">Singapura</button>
+</div>
+</div>
+<!-- Row 2: Jenjang & Bidang Minat Selectors -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 pt-4 bg-surface-container-low/50 p-4 rounded-xl">
+<!-- Jenjang Studi -->
+<div class="lg:col-span-5 flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none text-secondary">school</span>
+              Jenjang Program
+            </label>
+<div class="flex flex-wrap gap-1.5">
+<button class="level-chip px-3 py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container text-primary hover:bg-surface-container-high active:scale-95 transition-all">Foundation / Pathway</button>
+<button class="level-chip px-3 py-1.5 rounded-lg text-label-sm font-label-sm bg-primary text-on-primary shadow-xs">S1 / Bachelor</button>
+<button class="level-chip px-3 py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container text-primary hover:bg-surface-container-high">S2 / Master</button>
+<button class="level-chip px-3 py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container text-primary hover:bg-surface-container-high">S3 / Doctoral</button>
+</div>
+</div>
+<!-- Bidang Minat -->
+<div class="lg:col-span-5 flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base leading-none text-secondary">category</span>
+              Bidang Minat Prioritas
+            </label>
+<div class="flex flex-wrap gap-1.5">
+<button class="discipline-chip px-3 py-1.5 rounded-lg text-label-sm font-label-sm bg-primary text-on-primary">Engineering &amp; AI</button>
+<button class="discipline-chip px-3 py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container text-primary hover:bg-surface-container-high">Business &amp; Finance</button>
+<button class="discipline-chip px-3 py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container text-primary hover:bg-surface-container-high">Health &amp; Medicine</button>
+<button class="discipline-chip px-3 py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container text-primary hover:bg-surface-container-high">Arts &amp; Design</button>
+</div>
+</div>
+<!-- Search or Reset CTA -->
+<div class="lg:col-span-2 flex items-end">
+<button class="w-full h-11 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-2 transition-all" id="resetFilterBtn">
+<span class="material-symbols-outlined text-base leading-none">restart_alt</span>
+              Reset Filter
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DESTINATIONS MOSAIC & CURATED CARDS -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-12 w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<span class="text-secondary font-label-md text-label-md uppercase tracking-wider font-bold">Direktori Lengkap</span>
+<h2 class="font-headline-xl text-headline-xl text-primary">Destinasi &amp; Institusi Unggulan</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Informasi terakreditasi mengenai izin kerja pasca-studi, skema pembiayaan, serta universitas mitra unggulan Cosmo Education.
+      </p>
+</div>
+<!-- Country Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8" id="destinationsGrid">
+<!-- CARD 1: UNITED KINGDOM (Featured Wide / 7 Columns) -->
+<article class="destination-card lg:col-span-7 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-country="uk">
+<div>
+<!-- Image Header with Flags & Accreditations -->
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Majestic historic architecture of Oxford and Cambridge universities with students walking across sunny lawns surrounded by grand neo-gothic spires and modern libraries under a soft blue British sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj6_FwKYnWB7SUl85gQd-TUm589hxtoIofc60oEsKkgZT54hz-KEZu3LFKhX4yRKIIh2BzW2OsVZW4iEuRLOHgUiM1pNtKiSRPNG4LCZiPmMptL1wepLD4ik_vPW3Sj2mfdVjV_R9RFf3fUigBS80xE9XhESA3kWIWGKf63bGxQ4J-cpJwgw4tGglG_-CdDA8ylf9rfAYpxdYyKEwpT36WzkrDp_Mk8Y040bTFvIr_JKrsTs43iINqGw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-xs">
+                🇬🇧 United Kingdom
+              </span>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+                Russell Group Hub
+              </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
+<div>
+<span class="font-label-sm text-label-sm opacity-90">Izin Pasca Kelulusan</span>
+<p class="font-headline-sm text-headline-sm font-bold text-white">Graduate Route: 2 - 3 Tahun</p>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm opacity-90">Rata-rata Durasi S1</span>
+<p class="font-headline-sm text-headline-sm font-bold text-white">3 Tahun (Fast-track)</p>
+</div>
+</div>
+</div>
+<!-- Content Body -->
+<div class="p-6 lg:p-8 flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">Inggris (United Kingdom)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Pusat keunggulan akademis berstandar global dengan tradisi berabad-abad. Program Master selesai hanya dalam 1 tahun dan Sarjana 3 tahun, menghemat biaya hidup signifikan dibandingkan destinasi lain.
+              </p>
+</div>
+<!-- Key Metrics Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 bg-surface-container-low p-4 rounded-xl">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Tuition Fee / Thn</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">£18,000 - £35,000</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Biaya Hidup / Bln</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">£1,100 - £1,500</span>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-outline block">Kerja Sampingan</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">20 Jam / Minggu</span>
+</div>
+</div>
+<!-- Partner Institutions Badges -->
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider block mb-2">Universitas Mitra Utama:</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">University of Oxford</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">Imperial College London</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">UCL</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">Univ of Manchester</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">King's College London</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">Univ of Edinburgh</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 lg:p-8 pt-0 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-on-secondary-container font-bold" href="#">
+            Pelajari Prosedur UCAS &amp; Visa UK
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<span class="text-outline font-label-sm text-label-sm">Intake: Sept &amp; Jan</span>
+</div>
+</article>
+<!-- CARD 2: AUSTRALIA & NEW ZEALAND (5 Columns) -->
+<article class="destination-card lg:col-span-5 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-country="aus">
+<div>
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Modern Australian university campus in Melbourne with sunny courtyard, diverse international students collaborating on laptops near eucalyptus trees and architectural glass buildings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMQ1VS2-_o_izo-G8PZaLFM0DYBd_JvuW8N0TFa8MXa5lE8qbLcR38opxxXccKAreIT6UCMH5Gzbh5ltRazlyoRFsqC5SKYf7O1BBmT3JQWGEyJlAZ-uL2qDd-MxGDBuKzMvecXuLSjh8C5LH_h9xqiidY9QgCmXGTDad6z8yxDWZbU33kBvZvoRV81loqWJczcUFpTy0Q2yxwksiA2bd1iuqvxgcJT8qIIU7giUa9MlMzoJrI7rCRLg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-xs">
+                🇦🇺 Australia &amp; 🇳🇿 NZ
+              </span>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+                Group of Eight (Go8)
+              </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
+<div>
+<span class="font-label-sm text-label-sm opacity-90">Post-Study Work</span>
+<p class="font-headline-sm text-headline-sm font-bold text-white">2 - 4 Tahun (Subclass 485)</p>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm opacity-90">Part-Time Work</span>
+<p class="font-headline-sm text-headline-sm font-bold text-white">48 Jam / 2 Minggu</p>
+</div>
+</div>
+</div>
+<div class="p-6 lg:p-8 flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">Australia &amp; New Zealand</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Destinasi favorit mahasiswa Indonesia berkat kualitas hidup tinggi, iklim ramah, dan jalur kerja pasca-kelulusan yang sangat fleksibel di kota metropolitan maupun regional.
+              </p>
+</div>
+<div class="grid grid-cols-2 gap-4 bg-surface-container-low p-4 rounded-xl">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Tuition Fee / Thn</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">AUD 33,000 - 48,000</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Biaya Hidup / Bln</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">AUD 1,900 - 2,500</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider block mb-2">Universitas Mitra Utama:</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">Univ of Melbourne</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">UNSW Sydney</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">Univ of Sydney</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">Monash University</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-primary">Univ of Auckland</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 lg:p-8 pt-0 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-on-secondary-container font-bold" href="#">
+            Detail Intake Feb &amp; Juli
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<span class="text-outline font-label-sm text-label-sm">Go8 Certified</span>
+</div>
+</article>
+<!-- CARD 3: USA (4 Columns) -->
+<article class="destination-card lg:col-span-4 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-country="usa">
+<div>
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="High tech American research university campus with innovation laboratory, students working on robotics, warm afternoon lighting with prestigious academic brick buildings in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATqDX1z02Z75DYwavNTeE2-GIeGyBNEasirfe8iB9Y3xnbXw98LqoEOmQrwwMRr_e1MUwZsjTOK6e2wNec6kO3NSzajoBFRATJnSZPL2XUfn5WpJQ2QMj-CO7iT2TFnb5g-8hbxCj9jERK9lbWQ0_UdZOER94hoVwUzWm3VcAbsKQTYxkCorCHnQPbaweItPjJeZEJMKYJsWSMMFvrehEbyJBKmM-kDHlmF90KvnoXetniQ5-yxGr1pQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-xs">
+                🇺🇸 United States
+              </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<span class="font-label-sm text-label-sm opacity-90">Keunggulan Utama</span>
+<p class="font-headline-sm text-headline-sm font-bold text-white">STEM OPT Hingga 3 Tahun</p>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-primary">Amerika Serikat (USA)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Kiblat inovasi, teknologi, dan ekosistem riset terbesar di dunia. Fleksibilitas memilih major/minor ganda serta peluang asistensi riset (GRA/GTA) dengan pendanaan penuh.
+            </p>
+<div class="bg-surface-container-low p-3.5 rounded-xl flex flex-col gap-1.5">
+<div class="flex justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tuition Rata-rata</span>
+<span class="font-label-md text-label-md text-primary font-bold">$28,000 - $60,000 / thn</span>
+</div>
+<div class="flex justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Biaya Hidup</span>
+<span class="font-label-md text-label-md text-primary font-bold">$1,400 - $2,200 / bln</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">MIT</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">Columbia Univ</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">UC Berkeley</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">NYU</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">Purdue Univ</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-on-secondary-container font-bold" href="#">
+            Panduan SAT &amp; F-1 Visa
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- CARD 4: CANADA (4 Columns) -->
+<article class="destination-card lg:col-span-4 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-country="can">
+<div>
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Scenic Canadian university campus in Vancouver or Toronto with snow-capped mountain backdrop and maple trees, students studying near modern glass library." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx7OwQ9gGG2HLvkV3dpmuh9TPlFDzy3Cvba2Sli3XtWmpvImR2ha9MI1bqdxBbX4k7QYieotODtdOjLqvg8t6Ld-3MLKUV2Ge8z2qBt5C3RKoUBc9N3kkm898o_59VHbi_BivGYiwyWKt276EtNZLTCfWaOjPE3oNoeiOxp0iBBbs00n1_DlKCYJ60VBuOrdGG5siysrVr1bxhCE1IQfkSbSeahzWdG4cKsnd88hUqUOaOL6LX50-_AA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-xs">
+                🇨🇦 Canada
+              </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<span class="font-label-sm text-label-sm opacity-90">Keunggulan Utama</span>
+<p class="font-headline-sm text-headline-sm font-bold text-white">PGWP 3 Tahun &amp; Opsi PR</p>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-primary">Kanada</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Negara paling inklusif dengan kebijakan imigrasi ramah lulusan internasional (Express Entry &amp; PNP). Program Co-op terintegrasi memberikan pengalaman kerja industri bergaji sebelum lulus.
+            </p>
+<div class="bg-surface-container-low p-3.5 rounded-xl flex flex-col gap-1.5">
+<div class="flex justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tuition Rata-rata</span>
+<span class="font-label-md text-label-md text-primary font-bold">CAD 22,000 - 40,000 / thn</span>
+</div>
+<div class="flex justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Biaya Hidup</span>
+<span class="font-label-md text-label-md text-primary font-bold">CAD 1,300 - 1,800 / bln</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">Univ of Toronto</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">UBC</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">McGill Univ</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">Waterloo</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-on-secondary-container font-bold" href="#">
+            Program Co-op &amp; SDS Visa
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- CARD 5: GERMANY & CONTINENTAL EUROPE (4 Columns) -->
+<article class="destination-card lg:col-span-4 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-country="ger">
+<div>
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="German engineering university laboratory in Munich or Berlin with state-of-the-art machinery, solar panels, and focused engineering students working on automotive design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0RQXL2FGB2x1Lf5sDmy4ax2Vf-vpQYXQ2XiefHXdwghc3fJjy-WwxOpbjQNGa2Ue2ptF_9Ljvo-AFzu5QleiJd-H3md8JGxqcwuySouiWxSrZIYpjHHevKqldGig__JW2ut1vP_UFdX572EHh-zeCXctbp7DNsuMiJvl8qPu8wMTnT_uIVRjfkjNWAwtUiTHSXVrnDLn6X8yT965WzutKpsMAAcUsnxy6NwfL-HfzwhCeHbfYuUaMXw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-xs">
+                🇩🇪 Jerman &amp; 🇳🇱 Belanda
+              </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<span class="font-label-sm text-label-sm opacity-90">Keunggulan Finansial</span>
+<p class="font-headline-sm text-headline-sm font-bold text-white">Biaya Subsidi / Hampir Nol</p>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-primary">Jerman &amp; Eropa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Kekuatan industri teknik, manufaktur, dan energi dunia. Universitas negeri Jerman tidak memungut biaya kuliah untuk program S1/S2 tertentu, hanya biaya administrasi semesteran yang terjangkau.
+            </p>
+<div class="bg-surface-container-low p-3.5 rounded-xl flex flex-col gap-1.5">
+<div class="flex justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tuition Rata-rata</span>
+<span class="font-label-md text-label-md text-secondary font-bold">€0 - €3,000 / thn (Negeri)</span>
+</div>
+<div class="flex justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Biaya Hidup (Blocked Acc)</span>
+<span class="font-label-md text-label-md text-primary font-bold">€934 / bln</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">TUM Munich</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">RWTH Aachen</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">TU Berlin</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">Univ of Amsterdam</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-on-secondary-container font-bold" href="#">
+            Jalur Studienkolleg &amp; APS
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- QUICK COMPARISON MATRIX TABLE SECTION -->
+<section class="w-full bg-surface-container-low py-16">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<span class="text-secondary font-label-md text-label-md uppercase tracking-wider font-bold">Matriks Analisis</span>
+<h2 class="font-headline-xl text-headline-xl text-primary">Tabel Perbandingan Cepat</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg">
+          Tinjauan komparatif indikator biaya dan regulasi ketenagakerjaan mahasiswa di tiap negara tujuan untuk membantu keluarga membuat keputusan finansial yang matang.
+        </p>
+</div>
+<!-- Comparative Table Container -->
+<div class="w-full overflow-x-auto bg-surface-container-lowest rounded-2xl shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-primary font-label-md text-label-md border-b-0">
+<th class="py-4 px-6 font-bold">Negara Tujuan</th>
+<th class="py-4 px-6 font-bold">Estimasi Biaya Kuliah / Thn</th>
+<th class="py-4 px-6 font-bold">Biaya Hidup / Bln</th>
+<th class="py-4 px-6 font-bold">Izin Kerja Mahasiswa</th>
+<th class="py-4 px-6 font-bold">Izin Kerja Pasca-Studi (PSW)</th>
+<th class="py-4 px-6 font-bold text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: UK -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-6 font-bold text-primary flex items-center gap-2">
+<span class="text-xl">🇬🇧</span>
+<div>
+<span class="block">Inggris (UK)</span>
+<span class="text-xs text-outline font-normal">S1 3 thn | S2 1 thn</span>
+</div>
+</td>
+<td class="py-4 px-6 font-medium">£16,000 - £38,000<br/><span class="text-xs text-on-surface-variant">≈ Rp 320jt - 760jt</span></td>
+<td class="py-4 px-6">£1,100 - £1,500<br/><span class="text-xs text-on-surface-variant">(London &gt; Non-London)</span></td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 text-primary font-bold">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span> 20 Jam / minggu
+                </span>
+<div class="text-xs text-on-surface-variant">Penuh saat libur semester</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-bold text-secondary">2 Tahun</span> (Bachelor/Master)<br/>
+<span class="text-xs text-on-surface-variant">3 Tahun untuk PhD</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm text-primary transition-all">Pilih UK</button>
+</td>
+</tr>
+<!-- Row 2: Australia -->
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-surface-container-low/20">
+<td class="py-4 px-6 font-bold text-primary flex items-center gap-2">
+<span class="text-xl">🇦🇺</span>
+<div>
+<span class="block">Australia</span>
+<span class="text-xs text-outline font-normal">S1 3-4 thn | S2 1.5-2 thn</span>
+</div>
+</td>
+<td class="py-4 px-6 font-medium">AUD 30,000 - 48,000<br/><span class="text-xs text-on-surface-variant">≈ Rp 310jt - 500jt</span></td>
+<td class="py-4 px-6">AUD 1,900 - 2,500<br/><span class="text-xs text-on-surface-variant">Standar Dept. Home Affairs</span></td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 text-primary font-bold">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span> 48 Jam / 2 minggu
+                </span>
+<div class="text-xs text-on-surface-variant">Fleksibilitas shift kerja</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-bold text-secondary">2 - 4 Tahun</span><br/>
+<span class="text-xs text-on-surface-variant">+1-2 thn wilayah regional</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm text-primary transition-all">Pilih Australia</button>
+</td>
+</tr>
+<!-- Row 3: USA -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-6 font-bold text-primary flex items-center gap-2">
+<span class="text-xl">🇺🇸</span>
+<div>
+<span class="block">Amerika Serikat</span>
+<span class="text-xs text-outline font-normal">S1 4 thn | S2 2 thn</span>
+</div>
+</td>
+<td class="py-4 px-6 font-medium">$26,000 - $65,000<br/><span class="text-xs text-on-surface-variant">≈ Rp 410jt - 1M+</span></td>
+<td class="py-4 px-6">$1,300 - $2,300<br/><span class="text-xs text-on-surface-variant">Tergantung state &amp; kampus</span></td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 text-primary font-bold">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span> 20 Jam (On-Campus)
+                </span>
+<div class="text-xs text-on-surface-variant">CPT magang mulai tahun kedua</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-bold text-secondary">1 - 3 Tahun</span><br/>
+<span class="text-xs text-on-surface-variant">OPT biasa 1 thn / STEM 3 thn</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm text-primary transition-all">Pilih USA</button>
+</td>
+</tr>
+<!-- Row 4: Canada -->
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-surface-container-low/20">
+<td class="py-4 px-6 font-bold text-primary flex items-center gap-2">
+<span class="text-xl">🇨🇦</span>
+<div>
+<span class="block">Kanada</span>
+<span class="text-xs text-outline font-normal">S1 4 thn | S2 1-2 thn</span>
+</div>
+</td>
+<td class="py-4 px-6 font-medium">CAD 22,000 - 45,000<br/><span class="text-xs text-on-surface-variant">≈ Rp 250jt - 520jt</span></td>
+<td class="py-4 px-6">CAD 1,300 - 1,800<br/><span class="text-xs text-on-surface-variant">Bukti dana CAD 20,635/thn</span></td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 text-primary font-bold">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span> 20 Jam / minggu
+                </span>
+<div class="text-xs text-on-surface-variant">Off-campus diizinkan</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-bold text-secondary">Hingga 3 Tahun</span><br/>
+<span class="text-xs text-on-surface-variant">PGWP mendukung PR Express Entry</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm text-primary transition-all">Pilih Kanada</button>
+</td>
+</tr>
+<!-- Row 5: Germany -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-6 font-bold text-primary flex items-center gap-2">
+<span class="text-xl">🇩🇪</span>
+<div>
+<span class="block">Jerman</span>
+<span class="text-xs text-outline font-normal">S1 3 thn | S2 2 thn</span>
+</div>
+</td>
+<td class="py-4 px-6 font-medium text-secondary">€0 - €3,000<br/><span class="text-xs text-on-surface-variant">Hanya semester ticket €300/sem</span></td>
+<td class="py-4 px-6">€934 - €1,200<br/><span class="text-xs text-on-surface-variant">Blocked account wajib</span></td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1 text-primary font-bold">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span> 140 Hari Penuh / thn
+                </span>
+<div class="text-xs text-on-surface-variant">Atau 280 setengah hari kerja</div>
+</td>
+<td class="py-4 px-6">
+<span class="font-bold text-secondary">18 Bulan</span> (Job Search)<br/>
+<span class="text-xs text-on-surface-variant">Bisa lanjut EU Blue Card</span>
+</td>
+<td class="py-4 px-6 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm text-primary transition-all">Pilih Jerman</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- ADMISSION REQUIREMENTS & TIMELINE ROADMAP -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-16 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Entry Requirements Guide -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div>
+<span class="text-secondary font-label-md text-label-md uppercase tracking-wider font-bold">Standar Kualifikasi</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Syarat Masuk Umum</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Dokumen utama yang harus disiapkan oleh siswa SMA / Sarjana asal Indonesia sebelum mendaftar ke universitas global.
+          </p>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Requirement Item 1 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-xl">translate</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Sertifikasi Bahasa Inggris</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                IELTS Academic min. 6.0 - 7.0 (tidak ada sub-skor &lt; 6.0) atau TOEFL iBT min. 80 - 100, atau PTE Academic min. 58.
+              </p>
+</div>
+</div>
+<!-- Requirement Item 2 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-xl">history_edu</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Transkrip Akademik &amp; Ijazah</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Rata-rata rapor SMA min. 80-85% (atau kualifikasi IB/A-Level) untuk S1. IPK minimal 3.00 - 3.50 skala 4.00 untuk program Master.
+              </p>
+</div>
+</div>
+<!-- Requirement Item 3 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-xl">description</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Statement of Purpose &amp; Rekomendasi</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Motivation letter autentik dan 2 surat rekomendasi dari kepala sekolah/dosen/atasan kerja yang telah diverifikasi.
+              </p>
+</div>
+</div>
+<!-- Requirement Item 4 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-xl">account_balance</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Bukti Finansial &amp; Sponsorship</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Rekening koran tabungan aktif 3-6 bulan terakhir atau Letter of Sponsorship resmi (LPDP, AAS, Chevening, Fulbright).
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Intake Timeline (Fall vs Spring) -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div>
+<span class="text-secondary font-label-md text-label-md uppercase tracking-wider font-bold">Rencana Waktu Pendaftaran</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Timeline Intake Global 2025/2026</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Pilihlah siklus intake yang sesuai dengan jadwal kelulusan sekolah dan persiapan tes Anda.
+          </p>
+</div>
+<!-- Intake Switcher Tabs -->
+<div class="flex p-1 rounded-xl bg-surface-container max-w-md">
+<button class="flex-1 py-2 px-4 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-xs font-bold transition-all" id="btnIntakeFall">
+            Intake Musim Gugur (Fall / Sept)
+          </button>
+<button class="flex-1 py-2 px-4 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" id="btnIntakeSpring">
+            Intake Musim Semi (Spring / Jan-Feb)
+          </button>
+</div>
+<!-- Roadmap Content: FALL INTAKE -->
+<div class="bg-surface-container-lowest p-6 lg:p-8 rounded-2xl shadow-sm flex flex-col gap-6" id="contentIntakeFall">
+<div class="flex items-center justify-between pb-4 bg-surface-container-low p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-2xl text-secondary">event_available</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">Intake Terbesar &amp; Terlengkap</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tersedia untuk seluruh jurusan di UK, USA, Eropa &amp; Kanada</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">Intake Utama</span>
+</div>
+<!-- Step 1 to 4 -->
+<div class="relative pl-6 flex flex-col gap-6">
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-surface-container"></div>
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold -ml-[25px] ring-4 ring-surface-container-lowest">1</div>
+<div>
+<span class="font-label-md text-label-md text-secondary font-bold">Oktober - Desember (Tahun Sebelumnya)</span>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Konseling Jurusan &amp; Persiapan Dokumen</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ikuti tes simulasi IELTS, terjemahan transkrip tersumpah, dan drafting personal statement bersama tim mentor Cosmo.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold -ml-[25px] ring-4 ring-surface-container-lowest">2</div>
+<div>
+<span class="font-label-md text-label-md text-secondary font-bold">Januari - Maret</span>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Pengajuan Aplikasi &amp; Deadline Beasiswa</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Submit portal UCAS / CommonApp / Direktori kampus. Pengajuan beasiswa institusi partial atau early-bird discount.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold -ml-[25px] ring-4 ring-surface-container-lowest">3</div>
+<div>
+<span class="font-label-md text-label-md text-secondary font-bold">April - Juni</span>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Penerimaan Unconditional Offer &amp; CAS / I-20</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Konfirmasi penawaran universitas, pembayaran deposit kuliah, dan penerbitan formulir imigrasi legal.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold -ml-[25px] ring-4 ring-surface-container-lowest">4</div>
+<div>
+<span class="font-label-md text-label-md text-secondary font-bold">Juli - September</span>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Aplikasi Visa Pelajar &amp; Pre-Departure</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Pemeriksaan biometrik visa, booking student accommodation, tiket pesawat, dan briefing orientasi adaptasi budaya.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Roadmap Content: SPRING INTAKE (Initially Hidden) -->
+<div class="hidden bg-surface-container-lowest p-6 lg:p-8 rounded-2xl shadow-sm flex flex-col gap-6" id="contentIntakeSpring">
+<div class="flex items-center justify-between pb-4 bg-surface-container-low p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-2xl text-secondary">flight_takeoff</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">Intake Musim Semi (Semester 1 Australia &amp; NZ)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sangat ideal untuk alumni SMA nasional yang lulus di pertengahan tahun</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">Intake Populer</span>
+</div>
+<div class="relative pl-6 flex flex-col gap-6">
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-surface-container"></div>
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold -ml-[25px] ring-4 ring-surface-container-lowest">1</div>
+<div>
+<span class="font-label-md text-label-md text-secondary font-bold">Juni - Agustus</span>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Pengumpulan Ijazah Asli &amp; Tes Bahasa</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Pendaftaran langsung bagi lulusan baru SMA atau S1 yang siap tanpa gap year panjang.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold -ml-[25px] ring-4 ring-surface-container-lowest">2</div>
+<div>
+<span class="font-label-md text-label-md text-secondary font-bold">September - Oktober</span>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Letter of Offer &amp; Acceptance (CoE)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Proses penerbitan Confirmation of Enrolment (CoE) untuk Australia atau CAS untuk kampus UK intake Januari.</p>
+</div>
+</div>
+<div class="relative flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold -ml-[25px] ring-4 ring-surface-container-lowest">3</div>
+<div>
+<span class="font-label-md text-label-md text-secondary font-bold">November - Januari</span>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base">Pengajuan Visa Pelajar &amp; Keberangkatan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Proses visa Australia subclass 500 atau UK Student Visa, persiapan asuransi OSHC, dan welcome week kampus.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA BANNER: HIGH CONVERSION ADVISOR CONSULTATION -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-8 w-full mb-12">
+<div class="relative bg-gradient-to-r from-primary via-primary-container to-primary text-on-primary rounded-3xl p-8 lg:p-14 overflow-hidden shadow-xl">
+<!-- Subtle Decorative Background Circles -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-secondary/15 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -top-20 w-60 h-60 rounded-full bg-surface-variant/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-lowest/15 backdrop-blur-md text-secondary-fixed text-label-sm font-label-sm w-fit font-bold">
+<span class="material-symbols-outlined text-sm text-secondary-container">psychology</span>
+            Konsultasi 1-on-1 Bersama Certified Education Planner
+          </div>
+<h2 class="font-headline-xl text-headline-xl text-white">
+            Masih bingung menentukan negara tujuan terbaik?
+          </h2>
+<p class="font-body-lg text-body-lg text-inverse-on-surface/90 max-w-2xl">
+            Konsultasikan profil akademik, aspirasi karir jangka panjang, serta alokasi anggaran keluarga Anda bersama Education Advisor Cosmo. Dapatkan kurasi 3 universitas paling realistis tanpa biaya administrasi pendaftaran.
+          </p>
+<div class="flex flex-wrap items-center gap-6 pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-xl">verified</span>
+<span class="font-label-md text-label-md text-white font-medium">Bebas Biaya Pendaftaran Mitra</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-xl">verified</span>
+<span class="font-label-md text-label-md text-white font-medium">Review Statement of Purpose</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-xl">verified</span>
+<span class="font-label-md text-label-md text-white font-medium">Pendampingan Visa 100%</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 items-stretch lg:items-end justify-center">
+<a class="w-full sm:w-auto lg:w-full px-8 py-4 rounded-xl bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-label-lg text-label-lg font-bold text-center transition-all shadow-md active:scale-95 flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+            Jadwalkan Konsultasi Gratis
+          </a>
+<a class="w-full sm:w-auto lg:w-full px-8 py-3.5 rounded-xl bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 text-white font-label-md text-label-md font-bold text-center transition-all flex items-center justify-center gap-2" href="https://wa.me/628161965707" target="_blank">
+<span class="material-symbols-outlined text-xl">chat</span>
+            Tanya via WhatsApp Langsung
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- INTERACTIVE BEHAVIOR SCRIPT -->
+</main>
+<script is:inline>
+(function() {
+    // 1. Country Filter Interactivity
+    const countryButtons = document.querySelectorAll('.filter-country-btn');
+    const destinationCards = document.querySelectorAll('.destination-card');
+    const filterCounter = document.getElementById('activeFilterCounter');
+
+    countryButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle Active Styling on buttons
+        countryButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          b.classList.add('bg-surface-container-low', 'text-on-surface');
+        });
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+        const selectedCountry = btn.getAttribute('data-country');
+        let visibleCount = 0;
+
+        destinationCards.forEach(card => {
+          const cardCountry = card.getAttribute('data-country');
+          if (selectedCountry === 'all' || selectedCountry === cardCountry) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (filterCounter) {
+          filterCounter.textContent = selectedCountry === 'all' 
+            ? 'Menampilkan 5 Wilayah Utama' 
+            : `Menampilkan ${visibleCount} Kartu Destinasi Terpilih`;
+        }
+      });
+    });
+
+    // 2. Chip selectors toggle effect (Level & Discipline)
+    const toggleChips = (selector) => {
+      document.querySelectorAll(selector).forEach(chip => {
+        chip.addEventListener('click', () => {
+          document.querySelectorAll(selector).forEach(c => {
+            c.classList.remove('bg-primary', 'text-on-primary', 'shadow-xs');
+            c.classList.add('bg-surface-container', 'text-primary');
+          });
+          chip.classList.remove('bg-surface-container', 'text-primary');
+          chip.classList.add('bg-primary', 'text-on-primary', 'shadow-xs');
+        });
+      });
+    };
+    toggleChips('.level-chip');
+    toggleChips('.discipline-chip');
+
+    // 3. Reset Filter Handler
+    const resetBtn = document.getElementById('resetFilterBtn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        const defaultAllBtn = document.querySelector('.filter-country-btn[data-country="all"]');
+        if (defaultAllBtn) defaultAllBtn.click();
+      });
+    }
+
+    // 4. Intake Timeline Tabs Switcher
+    const btnFall = document.getElementById('btnIntakeFall');
+    const btnSpring = document.getElementById('btnIntakeSpring');
+    const contentFall = document.getElementById('contentIntakeFall');
+    const contentSpring = document.getElementById('contentIntakeSpring');
+
+    if (btnFall && btnSpring && contentFall && contentSpring) {
+      btnFall.addEventListener('click', () => {
+        btnFall.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-bold');
+        btnFall.classList.remove('text-on-surface-variant');
+        btnSpring.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-bold');
+        btnSpring.classList.add('text-on-surface-variant');
+        contentFall.classList.remove('hidden');
+        contentSpring.classList.add('hidden');
+      });
+
+      btnSpring.addEventListener('click', () => {
+        btnSpring.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-bold');
+        btnSpring.classList.remove('text-on-surface-variant');
+        btnFall.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-bold');
+        btnFall.classList.add('text-on-surface-variant');
+        contentSpring.classList.remove('hidden');
+        contentFall.classList.add('hidden');
+      });
+    }
+  })();
+</script>
+</Layout>

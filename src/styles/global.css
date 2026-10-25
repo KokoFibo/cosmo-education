@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Token warna: terang (Academic Prestige Modern) dan gelap (Dark Edition), dipakai lewat variabel CSS */
+:root {
+  color-scheme: light;
+  --c-background: 248 249 255;
+  --c-error: 186 26 26;
+  --c-error-container: 255 218 214;
+  --c-inverse-on-surface: 234 241 255;
+  --c-inverse-primary: 178 200 237;
+  --c-inverse-surface: 33 49 69;
+  --c-on-background: 11 28 48;
+  --c-on-error: 255 255 255;
+  --c-on-error-container: 147 0 10;
+  --c-on-primary: 255 255 255;
+  --c-on-primary-container: 121 143 177;
+  --c-on-primary-fixed: 2 28 57;
+  --c-on-primary-fixed-variant: 50 72 102;
+  --c-on-secondary: 255 255 255;
+  --c-on-secondary-container: 102 53 0;
+  --c-on-secondary-fixed: 47 21 0;
+  --c-on-secondary-fixed-variant: 110 57 0;
+  --c-on-surface: 11 28 48;
+  --c-on-surface-variant: 68 71 77;
+  --c-on-tertiary: 255 255 255;
+  --c-on-tertiary-container: 91 135 255;
+  --c-on-tertiary-fixed: 0 23 75;
+  --c-on-tertiary-fixed-variant: 0 62 168;
+  --c-outline: 116 119 126;
+  --c-outline-variant: 196 198 206;
+  --c-primary: 0 18 41;
+  --c-primary-container: 15 39 68;
+  --c-primary-fixed: 212 227 255;
+  --c-primary-fixed-dim: 178 200 237;
+  --c-secondary: 144 77 0;
+  --c-secondary-container: 254 147 44;
+  --c-secondary-fixed: 255 220 195;
+  --c-secondary-fixed-dim: 255 183 125;
+  --c-surface: 248 249 255;
+  --c-surface-bright: 248 249 255;
+  --c-surface-container: 229 238 255;
+  --c-surface-container-high: 220 233 255;
+  --c-surface-container-highest: 211 228 254;
+  --c-surface-container-low: 239 244 255;
+  --c-surface-container-lowest: 255 255 255;
+  --c-surface-dim: 203 219 245;
+  --c-surface-tint: 74 95 127;
+  --c-surface-variant: 211 228 254;
+  --c-tertiary: 0 14 54;
+  --c-tertiary-container: 0 33 98;
+  --c-tertiary-fixed: 219 225 255;
+  --c-tertiary-fixed-dim: 180 197 255;
+  --c-canvas-deep: 248 249 255;
+  --c-surface-card: 255 255 255;
+  --c-surface-elevated: 239 244 255;
+  --c-surface-highlight: 229 238 255;
+  --c-gold-luminous: 254 147 44;
+  --c-gold-rich: 254 147 44;
+  --c-border-subtle: 196 198 206;
+}
+:root.dark {
+  color-scheme: dark;
+  --c-background: 5 20 36;
+  --c-error: 255 180 171;
+  --c-error-container: 147 0 10;
+  --c-inverse-on-surface: 35 49 67;
+  --c-inverse-primary: 85 94 117;
+  --c-inverse-surface: 212 228 250;
+  --c-on-background: 212 228 250;
+  --c-on-error: 105 0 5;
+  --c-on-error-container: 255 218 214;
+  --c-on-primary: 39 48 69;
+  --c-on-primary-container: 118 127 151;
+  --c-on-primary-fixed: 18 27 47;
+  --c-on-primary-fixed-variant: 61 71 92;
+  --c-on-secondary: 70 42 0;
+  --c-on-secondary-container: 61 36 0;
+  --c-on-secondary-fixed: 42 24 0;
+  --c-on-secondary-fixed-variant: 100 63 0;
+  --c-on-surface: 212 228 250;
+  --c-on-surface-variant: 198 198 205;
+  --c-on-tertiary: 0 46 106;
+  --c-on-tertiary-container: 51 124 239;
+  --c-on-tertiary-fixed: 0 26 66;
+  --c-on-tertiary-fixed-variant: 0 67 149;
+  --c-outline: 143 144 151;
+  --c-outline-variant: 69 71 77;
+  --c-primary: 189 198 224;
+  --c-primary-container: 11 21 40;
+  --c-primary-fixed: 217 226 253;
+  --c-primary-fixed-dim: 189 198 224;
+  --c-secondary: 255 185 91;
+  --c-secondary-container: 199 130 13;
+  --c-secondary-fixed: 255 221 182;
+  --c-secondary-fixed-dim: 255 185 91;
+  --c-surface: 5 20 36;
+  --c-surface-bright: 44 58 76;
+  --c-surface-container: 18 33 49;
+  --c-surface-container-high: 28 43 60;
+  --c-surface-container-highest: 39 54 71;
+  --c-surface-container-low: 13 28 45;
+  --c-surface-container-lowest: 1 15 31;
+  --c-surface-dim: 5 20 36;
+  --c-surface-tint: 189 198 224;
+  --c-surface-variant: 39 54 71;
+  --c-tertiary: 173 198 255;
+  --c-tertiary-container: 0 20 54;
+  --c-tertiary-fixed: 216 226 255;
+  --c-tertiary-fixed-dim: 173 198 255;
+  --c-canvas-deep: 8 15 29;
+  --c-surface-card: 11 21 40;
+  --c-surface-elevated: 17 30 56;
+  --c-surface-highlight: 25 40 71;
+  --c-gold-luminous: 245 176 65;
+  --c-gold-rich: 229 155 44;
+  --c-border-subtle: 30 47 77;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { margin: 0; overscroll-behavior: none; }
+  :focus-visible { outline: 2px solid rgb(var(--c-tertiary)); outline-offset: 2px; }
+}
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block; line-height: 1; text-transform: none; letter-spacing: normal;
+  white-space: nowrap; direction: ltr;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
